@@ -1,0 +1,28 @@
+{
+  "name": "bysj",
+  "version": "1.0.0",
+  "description": "graduation project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xinconan/bysj.git"
+  },
+  "keywords": [
+    "graduation",
+    "project"
+  ],
+  "author": "xinconan (xinconan2@sina.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xinconan/bysj/issues"
+  },
+  "homepage": "https://github.com/xinconan/bysj#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "express3-handlebars": "^0.5.2"
+  }
+}
