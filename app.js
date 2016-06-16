@@ -7,7 +7,8 @@ var express = require("express");
 var path = require("path");
 var http = require("http");
 var appConfig = require("./appConfig");
-var serv_auth = require("./controllsers/service/serv_auth");
+var serv_auth = require("./controllers/service/serv_auth");
+var schedule = require("./schedule");
 
 var app = express();
 app.set('port', process.env.PORT || appConfig.port);
