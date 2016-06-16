@@ -1,0 +1,19 @@
+<header data-am-widget="header" class="am-header am-header-default">
+    <div class="am-header-left am-header-nav">
+        <a href="javascript:;" class="" id="J_back">
+            <i class="am-header-icon am-icon-angle-left"></i>
+        </a>
+    </div>
+
+    <h1 class="am-header-title">
+        告警{{alarmId}}详情
+    </h1>
+    <script>
+        $(function(){
+            $("#J_back").on("click",function () {
+                console.log(11)
+                window.history.go(-1);
+            });
+        });
+    </script>
+</header>
