@@ -6,4 +6,5 @@
 
 module.exports = function(app){
     require("./route_alarm")(app);  //告警相关
+    require("./route_weixin")(app); //微信相关
 }

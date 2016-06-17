@@ -22,8 +22,10 @@
   "homepage": "https://github.com/xinconan/bysj#readme",
   "dependencies": {
     "body-parser": "^1.15.1",
+    "crypto": "0.0.3",
     "express": "^4.13.4",
     "express3-handlebars": "^0.5.2",
-    "node-schedule": "^1.1.0"
+    "node-schedule": "^1.1.0",
+    "wechat": "^2.0.3"
   }
 }
