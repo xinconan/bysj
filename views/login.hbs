@@ -1,0 +1,33 @@
+<header data-am-widget="header" class="am-header am-header-default">
+    <h1 class="am-header-title">
+        <img src="/images/logo.png" alt=""/>
+        登录
+    </h1>
+</header>
+<div class="am-g am-g-fixed" style="margin-top: 30px;">
+    <div class="am-u-sm-12 am-u-md-6 am-u-sm-centered">
+        <form class="am-form am-form-horizontal">
+            <div class="am-form-group am-form-icon">
+                <i class="am-icon-user"></i>
+                <input type="email" id="doc-ipt-3" class="am-form-field" placeholder="输入您的账号">
+            </div>
+
+            <div class="am-form-group am-form-icon">
+                <i class="am-icon-key"></i>
+                <input type="password" class="am-form-field" placeholder="输入您的密码">
+            </div>
+
+            <div class="am-form-group">
+                <div class="am-u-sm-4 am-u-sm-offset-8">
+                    <button type="submit" class="am-btn am-btn-primary">登录</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<script>
+    var _formHeight = ($("html").height()-$(".am-g-fixed").height())/2-30;
+    $(".am-g-fixed").css("margin-top",_formHeight+"px");
+</script>
