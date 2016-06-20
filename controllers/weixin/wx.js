@@ -4,6 +4,7 @@
 var wechat = require("wechat");
 var crypto = require('crypto');
 var appConfig = require("../../appConfig");
+var OAuth = require("./wx_oauth");
 
 
 function sha1(str) {
@@ -50,7 +51,8 @@ var reply = wechat(appConfig.weixin, wechat
                 } else {
                     console.log('用户 ' + message.FromUserName + ' 扫描官方二维码关注了公众号');
                 }
-                res.reply("欢迎关注监测系统公众号。您可以点击登录进行系统账号绑定！");
+                var _url = OAuth.getAuthorizeURL(appConfig.serverName+'/login', 'state', 'snsapi_userinfo');
+                res.reply("欢迎关注监测系统公众号。您可以点击<a href='"+_url+"'>登录</a>进行系统账号绑定！");
                 break;
             case 'SCAN':
                 console.log('已关注的用户 ' + message.FromUserName + ' 扫描带参二维码 ' + message.EventKey + ' 进入了微信');

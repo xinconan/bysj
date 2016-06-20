@@ -26,7 +26,11 @@
 
     </div>
 </div>
-
+{{#if userInfo}}
+    <script>
+        alert(userInfo);
+    </script>
+{{/if}}
 <script>
     var _formHeight = ($("html").height()-$(".am-g-fixed").height())/2-30;
     $(".am-g-fixed").css("margin-top",_formHeight+"px");
