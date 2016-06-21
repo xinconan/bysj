@@ -9,13 +9,20 @@
         <form class="am-form am-form-horizontal">
             <div class="am-form-group am-form-icon">
                 <i class="am-icon-user"></i>
-                <input type="email" id="doc-ipt-3" class="am-form-field" placeholder="输入您的账号">
+                <input type="email" id="doc-ipt-3" class="am-form-field" placeholder="请输入账号">
             </div>
 
             <div class="am-form-group am-form-icon">
                 <i class="am-icon-key"></i>
-                <input type="password" class="am-form-field" placeholder="输入您的密码">
+                <input type="password" class="am-form-field" placeholder="请输入密码">
             </div>
+
+            {{#if openid}}
+                <div class="am-form-group am-form-icon am-hide">
+                    <i class="am-icon-key"></i>
+                    <input type="text" class="am-form-field" value="{{ openid }}">
+                </div>
+            {{/if}}
 
             <div class="am-form-group">
                 <div class="am-u-sm-4 am-u-sm-offset-8">
@@ -26,11 +33,7 @@
 
     </div>
 </div>
-{{#if userInfo}}
-    <script>
-        alert(userInfo);
-    </script>
-{{/if}}
+
 <script>
     var _formHeight = ($("html").height()-$(".am-g-fixed").height())/2-30;
     $(".am-g-fixed").css("margin-top",_formHeight+"px");

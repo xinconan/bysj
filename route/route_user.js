@@ -12,22 +12,21 @@ module.exports = function(app){
         if(code){
             var jObject = {};
             jObject.code = code;
+
             OAuth.getAccessToken(code,function(err,result){
                 if(err){
-                    console.log("error")
+                    console.log(err)
                 }
                 console.log(result);
                 var accessToken = result.data.access_token;
                 var openid = result.data.openid;
-                OAuth.getUser(appConfig.weixin.openid,function(err,result){
-                    jObject.userInfo = result;
-                    res.render("login",jObject);
-                });
+                jObject.openid = openid;
+                res.render("login",jObject);
+
             });
         }else{
             res.render("login");
         }
-
 
     });
 }

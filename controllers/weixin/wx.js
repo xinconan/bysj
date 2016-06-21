@@ -51,7 +51,7 @@ var reply = wechat(appConfig.weixin, wechat
                 } else {
                     console.log('用户 ' + message.FromUserName + ' 扫描官方二维码关注了公众号');
                 }
-                var _url = OAuth.getAuthorizeURL(appConfig.serverName+'/login', 'state', 'snsapi_userinfo');
+                var _url = OAuth.getAuthorizeURL(appConfig.serverName+'/login', 'state', 'snsapi_base');
                 res.reply("欢迎关注监测系统公众号。您可以点击<a href='"+_url+"'>登录</a>进行系统账号绑定！");
                 break;
             case 'SCAN':
