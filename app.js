@@ -8,6 +8,7 @@ var path = require("path");
 var http = require("http");
 var appConfig = require("./appConfig");
 var serv_auth = require("./controllers/service/serv_auth");
+var helper = require("./public/components/helper");
 var schedule = require("./schedule");
 
 var app = express();
@@ -15,6 +16,7 @@ app.set('port', process.env.PORT || appConfig.port);
 
 var exphbs = require('express3-handlebars');
 app.engine('hbs', exphbs({
+    helpers:helper,
     layoutsDir: __dirname + '/layout',
     defaultLayout: 'layout',
     extname:  '.hbs'  //设置handlebars扩展名为hbs
@@ -23,7 +25,7 @@ app.set('view engine', 'hbs');
 
 /* 静态文件目录 */
 var staticFileCacheTime = 3600000;
-app.use(express.static(path.join(__dirname, 'public'), {maxAge: staticFileCacheTime}));
+app.use(express.static(path.join(__dirname, 'public/static'), {maxAge: staticFileCacheTime}));
 
 /* 挂载view页面全局参数 */
 app.use('/:type', serv_auth.rendParams);
